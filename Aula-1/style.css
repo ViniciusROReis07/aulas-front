@@ -6,9 +6,11 @@ div{
     color: green;
     margin: 5px;
     border: none;
+    background-color: black;
 }
 .reprovado{
     color: red;
     margin: 5px;
     border: none;
+    background-color: black;
 }

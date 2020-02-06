@@ -29,21 +29,24 @@ console.log(++nota2);*/
 
 const $calcular=document.getElementById("calcular");
 
-alert(nome.value);
 
-function calcularMedia(){
+const calcularMedia = (n1,n2) => (parseInt(n1)+parseInt(n2)) /2;
+
+const verificarSituacao = (media) =>media>=5? "Aprovado":"Reprovado";
+
+const exibirMedia = () => {
     const $nome = document.getElementById('nome');
     console.log($nome.value);
 
-    const $nota1=document.getElementById('nota1');
-    const $nota2=document.getElementById('nota2');
+    const n1=document.getElementById('nota1').value;
+    const n2=document.getElementById('nota2').value;
     const $media=document.getElementById('media');
     const $situcao=document.getElementById('situacao');
 
-    const media=( parseInt( $nota1.value) + parseInt($nota2.value) )/2;
+    const media= calcularMedia(n1,n2);
 
     if( media >= 5){
-        $situcao.value = "aprovado";
+        $situcao.value = "Aprovado";
         $situcao.classList.remove('Reprovado');
         $situcao.classList.add('aprovado');
     }else{
@@ -55,6 +58,54 @@ function calcularMedia(){
     
     $media.value=media;
 
+    
+
+    
+
 }
 
-$calcular.addEventListener('click', calcularMedia);
+const  calculaConceito= ()=>{
+
+    const media=document.getElementById('media').value
+    const $conceito=document.getElementById('conceito');
+
+      if(media<3){
+          $conceito.value="E";
+      }else if(media<5){
+          $conceito.value="D";
+      }else if(media<8){
+          $conceito.value="C";
+      }else if(media<10){
+          $conceito.value="B"
+      }else{
+          $conceito.value="A";
+      }
+}
+
+   /* //Armazenando função 
+    const calc = function () {
+        calcularMedia();
+        calculaConceito();
+            
+    }*/
+
+    //Arrow function
+    const calcular = () =>{
+        exibirMedia();
+        verificarSituacao();
+        calculaConceito();
+    }
+/*
+    function calculara(){
+        calcularMedia();
+        calculaConceito();
+    }*/
+
+    /*function soma  (a,b){
+        return a + b;
+    }*/
+
+    //Arrow ignora as chaves e o return , e se tiver um argumento somente pode ignorar as chaves
+    const soma2 = (a,b)=> a+b;
+
+$calcular.addEventListener('click', calcular);
