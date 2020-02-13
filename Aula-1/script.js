@@ -27,7 +27,9 @@ console.log(nota1++);
 console.log(++nota2);*/
 
 
-const $calcular=document.getElementById("calcular");
+const $calcular=document.getElementById('calcular');
+const $exibir=document.getElementById('exibir');
+const $conteiner=document.querySelector('.conteiner');
 
 
 const calcularMedia = (n1,n2) => (parseInt(n1)+parseInt(n2)) /2;
@@ -64,7 +66,7 @@ const exibirMedia = () => {
 
 }
 
-const  calculaConceito= ()=>{
+const  defineConceito= ()=>{
 
     const media=document.getElementById('media').value
     const $conceito=document.getElementById('conceito');
@@ -90,11 +92,14 @@ const  calculaConceito= ()=>{
     }*/
 
     //Arrow function
-    const calcular = () =>{
+    const exibirResultados = () =>{
         exibirMedia();
         verificarSituacao();
-        calculaConceito();
+        defineConceito();
     }
+
+    const exibir= (el) => el.classList.add('exibir');
+
 /*
     function calculara(){
         calcularMedia();
@@ -108,4 +113,7 @@ const  calculaConceito= ()=>{
     //Arrow ignora as chaves e o return , e se tiver um argumento somente pode ignorar as chaves
     const soma2 = (a,b)=> a+b;
 
-$calcular.addEventListener('click', calcular);
+    
+
+$calcular.addEventListener('click', exibirResultados);
+$exibir.addEventListener('click',( ) => exibir ($conteiner));

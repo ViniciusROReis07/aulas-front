@@ -14,3 +14,13 @@ div{
     border: none;
     background-color: black;
 }
+.conteiner{
+    height: 500px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+.exibir{
+    display: grid;
+}
