@@ -2,7 +2,7 @@
 -Novas tags HTML5.
 -Display flex.
 -flex-direction.
--Nova unidade de medida para páginas web (vw).
+-Nova unidade de medida para páginas web (vw,vh).
 -Use strict.
 -Criar interface web para smartphones.
 -innerHTML.
