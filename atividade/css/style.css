@@ -1,0 +1,42 @@
+body{
+    background-image: url(../imagens/brasil-politico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 1vw;
+}
+
+main{
+    min-height: 80vh;
+    height: auto;
+    width: 99vw;
+   
+}
+.conteiner{
+    height: auto;
+    min-height: 50vh;
+    width: 50vw;
+    background-color: rgba(0,0,0,0.8);
+    margin: 0vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    
+}
+
+#estado{
+    width: 20vw;
+    height: 3vh;
+    margin-bottom: 1vh;
+    margin-top: 5vh;
+    
+   
+}
+#cidades{
+    height: auto;
+    width: 20vw;
+    background-color: tomato;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
