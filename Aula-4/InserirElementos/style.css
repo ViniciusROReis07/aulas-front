@@ -1,0 +1,30 @@
+*{
+    color: #ffe57f;;
+}
+.conteiner{
+    display: flex;
+    /* Quebra linha */
+    flex-wrap: wrap;
+
+}
+.card{
+    border: 2px solid black;
+    margin: 5px;
+}
+.card-title{
+    background-color: #bf360c;
+    text-align: center;
+    font-size: bold;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/* nth-c() seleciona o elemento filho */
+.card-body li:nth-child(even){
+    background-color: #870000;
+}
+.card-body li:nth-child(odd){
+    background-color: #f9683a;
+}
