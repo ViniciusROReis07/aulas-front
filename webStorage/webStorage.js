@@ -62,3 +62,5 @@ $add.addEventListener('click',exibirName);
 $remove.addEventListener('click',removeDado);
 
 $clear.addEventListener('click', clear);
+
+$update.addEventListener('click',update);
