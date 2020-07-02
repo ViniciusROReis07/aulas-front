@@ -47,15 +47,58 @@ body{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: -10;
+    z-index: -1;
     opacity: 0;
 }
 .modal{
-    width: 50vw;
+    width: 70vw;
     margin: 10vh auto;
     background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .conteiner-modal.exibirModal{
-    opacity: 0;
+    opacity: 1;
     z-index: 999;
+}
+.form {
+    display: grid;
+    grid-template-areas: " nome nome nome nome "
+     " email email celular celular "
+      " endereco numero bairro bairro "
+       " cidade cidade estado cep ";
+    gap: 10px;
+    padding: 2vw;
+}
+ 
+#nome { grid-area: nome;}
+ 
+#email { grid-area: email;}
+ 
+#celular { grid-area: celular;}
+ 
+#endereco { grid-area: endereco;}
+ 
+#numero { grid-area: numero;}
+ 
+#bairro { grid-area: bairro;}
+ 
+#cidade { grid-area: cidade;}
+ 
+#estado { grid-area: estado;}
+ 
+#cep { grid-area: cep;}
+
+.form > input{
+    width: 100%;
+}
+
+.acao{
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+}
+.botao{
+    font: bold calc(2px + 1vw) sans-serif;
+    margin-right: 0.5vw;
 }
