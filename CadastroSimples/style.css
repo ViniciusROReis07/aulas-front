@@ -1,5 +1,5 @@
 body{
-    background-color: goldenrod;
+    background-color: rgba(139, 0, 0, 0.877);
 }
 .cadastro-form{
     background-color: white;
@@ -101,4 +101,31 @@ body{
 .botao{
     font: bold calc(2px + 1vw) sans-serif;
     margin-right: 0.5vw;
+}
+.tabela {
+    width: 100%;
+    background-color: darkred;
+    border-radius: 5px;
+    text-align: center;
+}
+ 
+th {
+    padding: 5px;
+    color: white;
+    font: bold calc(3px + 1vw) arial;
+}
+ 
+td {
+    border-radius: 5px;
+    border: 1px black solid;
+    color: black;
+    font: bold calc(2px + 1vw) arial;
+}
+ 
+.registros tr {
+    background-color: white;
+}
+ 
+.registros tr:hover {
+    background-color: grey;
 }
